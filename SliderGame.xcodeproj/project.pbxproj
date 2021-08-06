@@ -60,7 +60,7 @@
 		CF1B3A1D26BD236800D45DD6 /* SliderGame */ = {
 			isa = PBXGroup;
 			children = (
-				CF1B3A3526BD38D600D45DD6 /* GameView */,
+				CF1B3A3526BD38D600D45DD6 /* GameViews */,
 				CF1B3A3226BD326E00D45DD6 /* Manager */,
 				CF1B3A2F26BD31C600D45DD6 /* Slider */,
 				CF1B3A1E26BD236800D45DD6 /* SliderGameApp.swift */,
@@ -96,13 +96,13 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		CF1B3A3526BD38D600D45DD6 /* GameView */ = {
+		CF1B3A3526BD38D600D45DD6 /* GameViews */ = {
 			isa = PBXGroup;
 			children = (
 				CF1B3A3026BD31DC00D45DD6 /* SliderView.swift */,
 				CF1B3A3626BD390300D45DD6 /* ButtonView.swift */,
 			);
-			path = GameView;
+			path = GameViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
