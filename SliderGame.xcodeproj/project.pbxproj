@@ -11,6 +11,10 @@
 		CF1B3A2126BD236800D45DD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B3A2026BD236800D45DD6 /* ContentView.swift */; };
 		CF1B3A2326BD236A00D45DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1B3A2226BD236A00D45DD6 /* Assets.xcassets */; };
 		CF1B3A2626BD236A00D45DD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1B3A2526BD236A00D45DD6 /* Preview Assets.xcassets */; };
+		CF1B3A2E26BD2C2300D45DD6 /* SwiftUICustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B3A2D26BD2C2300D45DD6 /* SwiftUICustomSlider.swift */; };
+		CF1B3A3126BD31DC00D45DD6 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B3A3026BD31DC00D45DD6 /* SliderView.swift */; };
+		CF1B3A3426BD327F00D45DD6 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B3A3326BD327F00D45DD6 /* GameManager.swift */; };
+		CF1B3A3726BD390300D45DD6 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B3A3626BD390300D45DD6 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		CF1B3A2226BD236A00D45DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1B3A2526BD236A00D45DD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF1B3A2726BD236A00D45DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1B3A2D26BD2C2300D45DD6 /* SwiftUICustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICustomSlider.swift; sourceTree = "<group>"; };
+		CF1B3A3026BD31DC00D45DD6 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		CF1B3A3326BD327F00D45DD6 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		CF1B3A3626BD390300D45DD6 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,9 @@
 		CF1B3A1D26BD236800D45DD6 /* SliderGame */ = {
 			isa = PBXGroup;
 			children = (
+				CF1B3A3526BD38D600D45DD6 /* GameView */,
+				CF1B3A3226BD326E00D45DD6 /* Manager */,
+				CF1B3A2F26BD31C600D45DD6 /* Slider */,
 				CF1B3A1E26BD236800D45DD6 /* SliderGameApp.swift */,
 				CF1B3A2026BD236800D45DD6 /* ContentView.swift */,
 				CF1B3A2226BD236A00D45DD6 /* Assets.xcassets */,
@@ -67,6 +78,31 @@
 				CF1B3A2526BD236A00D45DD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF1B3A2F26BD31C600D45DD6 /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B3A2D26BD2C2300D45DD6 /* SwiftUICustomSlider.swift */,
+			);
+			path = Slider;
+			sourceTree = "<group>";
+		};
+		CF1B3A3226BD326E00D45DD6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B3A3326BD327F00D45DD6 /* GameManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CF1B3A3526BD38D600D45DD6 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				CF1B3A3026BD31DC00D45DD6 /* SliderView.swift */,
+				CF1B3A3626BD390300D45DD6 /* ButtonView.swift */,
+			);
+			path = GameView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1B3A2126BD236800D45DD6 /* ContentView.swift in Sources */,
+				CF1B3A3126BD31DC00D45DD6 /* SliderView.swift in Sources */,
+				CF1B3A3726BD390300D45DD6 /* ButtonView.swift in Sources */,
+				CF1B3A2E26BD2C2300D45DD6 /* SwiftUICustomSlider.swift in Sources */,
 				CF1B3A1F26BD236800D45DD6 /* SliderGameApp.swift in Sources */,
+				CF1B3A3426BD327F00D45DD6 /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

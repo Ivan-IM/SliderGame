@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var gameManager = GameManager()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 30) {
+            Text("Set the slider correctly")
+            Text("\(gameManager.value)")
+            SliderView(gameManager: gameManager)
+            ButtonView(gameManager: gameManager)
+        }
     }
 }
 
