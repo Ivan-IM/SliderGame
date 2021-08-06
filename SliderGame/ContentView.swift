@@ -9,19 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var gameManager = GameManager()
+    @EnvironmentObject var user: UserManager
     
     var body: some View {
-        VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 30) {
-            Text("Set the slider correctly")
-            Text("\(gameManager.value)")
-            SliderView(gameManager: gameManager)
-            ButtonView(gameManager: gameManager)
+        ZStack {
+            BackgroundView()
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
+            if user.showRegistrationView {
+                RegistrationView()
+            }
+            else {
+                SliderGameView(gameManager: gameManager)
+            }
+        }
+        .onTapGesture {
+            UIApplication.shared.endEditing()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserManager())
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(
+            #selector(UIResponder.resignFirstResponder),
+            to: nil,
+            from: nil,
+            for: nil
+        )
     }
 }
