@@ -46,6 +46,7 @@ struct SwiftUICustomSlider: UIViewRepresentable {
     
     func updateUIView(_ uiView: UISlider, context: Context) {
         uiView.value = Float(self.value)
+        uiView.thumbTintColor = self.thumbColor
     }
     
     func makeCoordinator() -> SwiftUICustomSlider.Coordinator {

@@ -14,7 +14,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             BackgroundView()
-                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             if user.showRegistrationView {
                 RegistrationView()
             }

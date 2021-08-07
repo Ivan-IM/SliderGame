@@ -15,7 +15,7 @@ struct SliderGameView: View {
         VStack(alignment: .center) {
             TextSliderView(name: $user.name, value: $gameManager.value)
             Spacer()
-            SliderView(gameManager: gameManager, redOpacity: $gameManager.sliderValue)
+            SliderView(gameManager: gameManager)
             Spacer()
             ButtonSliderView(gameManager: gameManager, cleanAction: user.clear)
         }

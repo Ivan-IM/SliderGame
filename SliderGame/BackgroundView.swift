@@ -26,7 +26,7 @@ struct BackgroundView: View {
                     self.start = UnitPoint(x: 4, y: 0)
                 })
             
-            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.5), Color.white.opacity(0.1)]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.3), Color.white.opacity(0)]), startPoint: .topLeading, endPoint: .bottomTrailing)
         }
         .ignoresSafeArea()
         .blur(radius: 50)

@@ -22,6 +22,7 @@ struct ButtonSliderView: View {
             HStack(spacing: 50) {
             Button(action: {
                 gameManager.getResult()
+                gameManager.getScore()
                 showingAlert.toggle()
             }, label: {
                 Text("Check me")
@@ -47,8 +48,7 @@ struct ButtonSliderView: View {
         }
     }
         .alert(isPresented: $showingAlert, content: {
-            Alert(title: Text("Result"), message: Text("Your accuracy \(gameManager.result)%"), dismissButton: .default(Text("OK"), action: {
-                gameManager.getScore()
+            Alert(title: Text("Result"), message: Text("Your accuracy \(gameManager.result)%, you get \(gameManager.title) score"), dismissButton: .default(Text("OK"), action: {
                 gameManager.value = Int.random(in: 0...100)
                 gameManager.sliderValue = Double.random(in: 0...100)
             }))
