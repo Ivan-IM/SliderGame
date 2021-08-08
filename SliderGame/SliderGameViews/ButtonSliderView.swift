@@ -14,12 +14,7 @@ struct ButtonSliderView: View {
     
     var body: some View {
         VStack(alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, spacing: 50) {
-            Text("Score \(gameManager.score)")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .bold()
-                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             
-            HStack(spacing: 50) {
             Button(action: {
                 gameManager.getResult()
                 gameManager.getScore()
@@ -35,7 +30,10 @@ struct ButtonSliderView: View {
             .overlay(Capsule().stroke(Color(.black), lineWidth: 3))
             .opacity(0.8)
             
-            
+            Text("Score \(gameManager.score)")
+                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                .bold()
+                .opacity(/*@START_MENU_TOKEN@*/0.8/*@END_MENU_TOKEN@*/)
             
             Button(action: cleanAction, label: {
                 Text("Logout")
@@ -46,7 +44,6 @@ struct ButtonSliderView: View {
             .overlay(Capsule().stroke(Color(.black), lineWidth: 1))
             .opacity(0.8)
         }
-    }
         .alert(isPresented: $showingAlert, content: {
             Alert(title: Text("Result"), message: Text("Your accuracy \(gameManager.result)%, you get \(gameManager.title) score"), dismissButton: .default(Text("OK"), action: {
                 gameManager.value = Int.random(in: 0...100)

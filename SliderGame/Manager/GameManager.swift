@@ -21,11 +21,11 @@ class GameManager: ObservableObject {
     }
     
     func getResult() {
-        result = 100 - abs(value - Int(sliderValue))
+        result = 100 - abs(Int(value) - Int(sliderValue))
     }
     
     func getScore() {
-        if result > 90 {
+        if result > 95 {
             score += 1
             title = "+1"
         }
